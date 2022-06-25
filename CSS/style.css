@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family:'Courier New', Courier, monospace;
+}
+body {
+	background-color: #DDD;
+	overflow: hidden;
+}
+h1 {
+	width: 50%;
+	margin: 10px auto;
+	text-align: center;
+	color: #AAA;
+}
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	width: 50%;
+	margin: 20px auto;
+}
+form input,textarea {
+	border: none;
+	border-bottom: 1px solid black;
+	padding: 15px 5px;
+	outline: none;
+}
+form input::placeholder, textarea::placeholder {
+	text-transform: capitalize;
+}
+form input:focus::placeholder,
+form textarea:focus::placeholder {
+	opacity: .6;
+}
+form input:last-of-type {
+	cursor: pointer;
+	transition: background-color .3s;
+	-webkit-transition: background-color .3s;
+	-moz-transition: background-color .3s;
+	-ms-transition: background-color .3s;
+	-o-transition: background-color .3s;
+}
+form input:last-of-type:hover,
+form input:last-of-type:focus {
+	background-color: #CCC;
+}
+
+.error {
+	font-size: .7rem;
+	margin-top: -15px;
+	color: red;
+	font-family: Arial, Helvetica, sans-serif;
+}
